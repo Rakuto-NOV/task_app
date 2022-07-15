@@ -9,7 +9,94 @@
             <p class="text-black my-3">
               タスク管理のTask Itです。
             </p>
+            <%= link_to '新規投稿', "#", class: "btn btn-primary me-2" %>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Task section -->
+    <section id="projects">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-md-8 mx-auto text-center">
+            <h6 class="text-primary">TASKS</h6>
+            <h1>未達成タスク一覧</h1>
+            <p>
+             こちらに表示されているタスクは未達成タスク一覧です。
+             画像をクリックすると詳細情報が確認出来ます。
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <%= image_tag 'task_img.png' %>
+              <img alt="Flower" src="/assets/task_img.png" />
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <img src="/img/pro2.jpg" alt="">
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <img src="/img/pro3.jpg" alt="">
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <img src="/img/pro4.jpg" alt="">
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <img src="/img/pro5.jpg" alt="">
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="task">
+              <img src="/img/pro6.jpg" alt="">
+              <div class="overlay">
+                <div>
+                  <h4 class="text-white">Project Title</h4>
+                  <h6 class="text-white">Website Design</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
