@@ -15,7 +15,7 @@ has_many :tasks
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
 | name           | string     | null: false                    |
-| explanation    | string     | null: false                    |
+| content    | string     | null: false                    |
 | priority_id    | integer    | null: false                    |
 | deadline_month | integer    | null: false                    |
 | deadline_day   | integer    | null: false                    |
