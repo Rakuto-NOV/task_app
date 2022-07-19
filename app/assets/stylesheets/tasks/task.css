@@ -36,3 +36,9 @@ section {
 .task-img-content:hover {
   transform: scale(1.1);
 }
+
+.task-img-content img{
+  transition: all 0.4s ease;
+  width: 100%;
+  object-fit: cover
+}
