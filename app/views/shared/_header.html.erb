@@ -11,22 +11,31 @@
           <%= link_to 'Home', "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Unfulfilled tasks', "#", class: "nav-link" %>
+          <%= link_to 'Unfulfilled tasks', "#unfulfilled-tasks", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Completed tasks', "#", class: "nav-link" %>
+          <%= link_to 'Completed tasks', "#completed-tasks", class: "nav-link" %>
         </li>
         <li class="nav-item">
-           <%= link_to 'Staff', "#", class: "nav-link" %>
+           <%= link_to 'Staff', "#staff", class: "nav-link" %>
         </li>
         <%# <%= link_to 'Staff', { anchor: "Staff" }, class: "nav-link" %>
       </ul>
-      <button class="btn btn-primary ms-3">
+      <% if user_signed_in? %>
+      <button class="btn ms-3">
+      <%= link_to current_user.name, "#", class: "user-nickname" %>
+      </button>
+      <button class="btn ms-3">
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+      </button>
+      <% else %>
+      <button class="btn ms-3">
       <%= link_to '新規登録',new_user_registration_path, class: "sign-up" %>
       </button>
-      <button class="btn btn-primary ms-3">
+      <button class="btn ms-3">
       <%= link_to 'ログイン',new_user_session_path, class: "login" %>
       </button>
+      <% end %>
     </div>
   </div>
 </nav>

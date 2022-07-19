@@ -16,7 +16,7 @@
     </div>
 
     <!-- Task section -->
-    <section id="tasks">
+    <section id="unfulfilled-tasks">
       <div class="container-fluid">
         <div class="row mb-4">
           <div class="col-md-8 mx-auto text-center">
@@ -31,7 +31,10 @@
 
         <div class="row g-3">
           <div class="col-lg-4 col-sm-6">
-            <div class="task">
+            <div class="task">aaa
+             <div class="task-img-content">
+               <%= image_tag "task_img.png" %>
+              </div>
               <% @tasks.each do |task| %>
               <div class="task-img-content">
                <%= image_tag "task_img.png" %>
@@ -54,11 +57,11 @@
     </section>
 
      <!-- Task section -->
-    <section id="tasks">
+    <section id="completed-tasks">
       <div class="container-fluid">
         <div class="row mb-4">
           <div class="col-md-8 mx-auto text-center">
-            <h6 class="text-primary">Unfulfilled tasks</h6>
+            <h6 class="text-primary">Completed tasks</h6>
             <h1>達成済みタスク一覧</h1>
             <p>
              こちらに表示されているタスクは達成済みタスク一覧です。
@@ -68,7 +71,7 @@
         </div>
 
          <!-- Task section -->
-    <section id="tasks">
+    <section id="staff">
       <div class="container-fluid">
         <div class="row mb-4">
           <div class="col-md-8 mx-auto text-center">
