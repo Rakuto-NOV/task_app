@@ -7,20 +7,20 @@
           <div class="col-lg-7 mx-auto text-center">
             <h1 class="display-4 text-black">Welcome to Task It</h1>
             <p class="text-black my-3">
-              タスク管理のTask Itです。
+              タスク共有アプリケーションのTask Itです。
             </p>
-            <%= link_to '新規投稿', "#", class: "btn btn-primary me-2" %>
+            <%= link_to '新規投稿', new_task_path, class: "btn btn-primary me-2" %>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Task section -->
-    <section id="projects">
+    <section id="tasks">
       <div class="container-fluid">
         <div class="row mb-4">
           <div class="col-md-8 mx-auto text-center">
-            <h6 class="text-primary">TASKS</h6>
+            <h6 class="text-primary">Unfulfilled tasks</h6>
             <h1>未達成タスク一覧</h1>
             <p>
              こちらに表示されているタスクは未達成タスク一覧です。
@@ -32,71 +32,53 @@
         <div class="row g-3">
           <div class="col-lg-4 col-sm-6">
             <div class="task">
-              <%= image_tag 'task_img.png' %>
-              <img alt="Flower" src="/assets/task_img.png" />
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
+              <% @tasks.each do |task| %>
+              <div class="task-img-content">
+               <%= image_tag "task_img.png" %>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="task">
-              <img src="/img/pro2.jpg" alt="">
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="task">
-              <img src="/img/pro3.jpg" alt="">
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="task">
-              <img src="/img/pro4.jpg" alt="">
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="task">
-              <img src="/img/pro5.jpg" alt="">
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="task">
-              <img src="/img/pro6.jpg" alt="">
-              <div class="overlay">
-                <div>
-                  <h4 class="text-white">Project Title</h4>
-                  <h6 class="text-white">Website Design</h6>
-                </div>
-              </div>
+              <div class="overlay" >
+               <h4 class="text-white">
+                 <%= task.name %>
+               </h4>
+               <h6 class= "text-white">
+                 <span class="name">
+                   <%= task.content %>
+                 </span>
+               </h6>
+             </div>
+             <% end %>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+     <!-- Task section -->
+    <section id="tasks">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-md-8 mx-auto text-center">
+            <h6 class="text-primary">Unfulfilled tasks</h6>
+            <h1>達成済みタスク一覧</h1>
+            <p>
+             こちらに表示されているタスクは達成済みタスク一覧です。
+             画像をクリックすると詳細情報確認出来ます。
+            </p>
+          </div>
+        </div>
+
+         <!-- Task section -->
+    <section id="tasks">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-md-8 mx-auto text-center">
+            <h6 class="text-primary">Staff</h6>
+            <h1>スタッフ一覧</h1>
+            <p>
+             こちらに表示されているタスクは未達成タスク一覧です。
+             画像をクリックすると詳細情報が確認出来ます。
+            </p>
+          </div>
+        </div>
+
+

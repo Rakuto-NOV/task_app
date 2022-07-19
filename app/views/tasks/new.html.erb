@@ -1,0 +1,14 @@
+<div class="contents row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @task, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "タスク名" %>
+      <%= form.text_area :content, placeholder: "タスクの説明" %>
+      <%= form.collection_select (:prioity_id, Prioity.all, :id, :name, {}, {class:"select-box", id:"task-prioity"}) %>
+      <%= form.collection_select (:prioity_id, Prioity_id.all, :id, :name, {}, {class:"select-box", id:"task-prioity"}) %>
+      <%= form.text_field :daedline_day, placeholder: "Taskname" %>
+      <%= form.text_area :text, placeholder: "text", rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

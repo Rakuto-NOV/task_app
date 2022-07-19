@@ -1,5 +1,9 @@
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .task {
-  background-image: url(<%= asset_path 'task_img.png' %>);
   position: relative;
   overflow: hidden;
 }
@@ -18,6 +22,17 @@
   opacity: 0;
 }
 
-.task img {
+.task-img-content {
   transition: all 0.4s ease;
+  width: 100%;
+  height: 500px;
+  object-fit: cover
+}
+
+.task:hover .overlay {
+  opacity: 1;
+}
+
+.task-img-content:hover {
+  transform: scale(1.1);
 }
